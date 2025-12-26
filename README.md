@@ -1,4 +1,4 @@
-# REST API for PyCM Library Written in FastAPI
+# REST API for PyCM Library
 
 ## Usage (dev)
 After installing requirements, run the below command:

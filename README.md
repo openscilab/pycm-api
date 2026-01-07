@@ -249,29 +249,27 @@ List all confusion matrices.
 
 ```mermaid
 flowchart LR
-    %% =========================
-    %% Normal User Flow
-    %% =========================
+
     subgraph UserFlow["Normal User API Flow"]
-        UStart([Start])
+        UStart((Start))
 
-        SignUp[POST /sign_up\nCreate user & API key]
-        SignIn[POST /sign_in\nAuthenticate user]
+        SignUp["POST sign_up"]
+        SignIn["POST sign_in"]
 
-        CreateCM[POST /cm/create\nCreate confusion matrix]
-        GetCM[GET /cm\nGet metrics & matrix]
-        UpdateCM[POST /cm/update\nUpdate confusion matrix]
-        DeleteCM[DELETE /cm/:cm_uid\nDelete confusion matrix]
+        CreateCM["POST cm create"]
+        GetCM["GET cm"]
+        UpdateCM["POST cm update"]
+        DeleteCM["DELETE cm by uid"]
 
-        Report[GET /cm/report\nGenerate HTML report]
-        Plot[GET /cm/plot\nGenerate PNG plot]
+        Report["GET cm report"]
+        Plot["GET cm plot"]
 
-        Compare[POST /compare\nCompare confusion matrices]
+        Compare["POST compare"]
 
-        MLCM[POST /mlcm\nMulti-label CM\n(no persistence)]
-        Curve[POST /curve\nROC / PR curve]
+        MLCM["POST mlcm"]
+        Curve["POST curve"]
 
-        UEnd([End])
+        UEnd((End))
 
         UStart --> SignUp
         UStart --> SignIn
@@ -291,20 +289,17 @@ flowchart LR
         GetCM --> DeleteCM
         DeleteCM --> UEnd
 
-        UStart -.-> MLCM
-        UStart -.-> Curve
+        UStart --> MLCM
+        UStart --> Curve
     end
 
-    %% =========================
-    %% Admin Flow
-    %% =========================
-    subgraph AdminFlow["Admin-Only API Flow"]
-        AStart([Admin Auth\nEnvironment Credentials])
+    subgraph AdminFlow["Admin Only API Flow"]
+        AStart((Admin Start))
 
-        ListUsers[GET /users\nList all users]
-        ListCMs[GET /cms\nList all confusion matrices]
+        ListUsers["GET users"]
+        ListCMs["GET cms"]
 
-        AEnd([End])
+        AEnd((End))
 
         AStart --> ListUsers
         AStart --> ListCMs

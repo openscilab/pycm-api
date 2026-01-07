@@ -261,7 +261,7 @@ flowchart LR
         CreateCM[POST /cm/create\nCreate confusion matrix]
         GetCM[GET /cm\nGet metrics & matrix]
         UpdateCM[POST /cm/update\nUpdate confusion matrix]
-        DeleteCM[DELETE /cm/{cm_uid}\nDelete confusion matrix]
+        DeleteCM[DELETE /cm/:cm_uid\nDelete confusion matrix]
 
         Report[GET /cm/report\nGenerate HTML report]
         Plot[GET /cm/plot\nGenerate PNG plot]
@@ -299,7 +299,7 @@ flowchart LR
     %% Admin Flow
     %% =========================
     subgraph AdminFlow["Admin-Only API Flow"]
-        AStart([Admin Auth\n(env credentials)])
+        AStart([Admin Auth\nEnvironment Credentials])
 
         ListUsers[GET /users\nList all users]
         ListCMs[GET /cms\nList all confusion matrices]

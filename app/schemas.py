@@ -1,3 +1,5 @@
+"""Schema definitions for the application."""
+
 import enum
 from typing import List, Dict, Set
 from pydantic import BaseModel

@@ -1,3 +1,5 @@
+"""Application parameters and configurations."""
+
 import os
 
 PATH2DB = os.path.join(os.path.dirname(__file__), "DB.db")

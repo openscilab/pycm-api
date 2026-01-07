@@ -1,3 +1,5 @@
+"""CRUD operations for the application."""
+
 from sqlalchemy.orm import Session
 
 from . import models, schemas, utils

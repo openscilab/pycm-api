@@ -1,3 +1,5 @@
+"""Main application file for the FastAPI app."""
+
 from typing import Annotated
 
 from fastapi import FastAPI, Depends, HTTPException

@@ -178,11 +178,12 @@ Create a multi-label confusion matrix (one-time use, not persisted).
 ```json
 {
   "api_key": "your_api_key_here",
-  "actual_vector": [{"class1", "class2"}, {"class2"}, {"class1"}],
-  "predicted_vector": [{"class1"}, {"class2"}, {"class1", "class2"}],
+  "actual_vector": [["class1", "class2"], ["class2"], ["class1"]],
+  "predicted_vector": [["class1"], ["class2"], ["class1", "class2"]],
   "classes": ["class1", "class2"]
 }
 ```
+In this example for the first the sample, the ground truth contains both "class1" and "class2," but the model only predicted "class1."
 
 **Response**: Multi-label confusion matrix with:
 - `multihot_actual`: Multi-hot encoded actual labels

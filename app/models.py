@@ -1,3 +1,5 @@
+"""Database models for the application."""
+
 from sqlalchemy import Boolean, Integer, Float, String
 from sqlalchemy import Column, ForeignKey
 from sqlalchemy.orm import relationship

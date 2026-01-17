@@ -1,3 +1,5 @@
+"""Utility functions for the application."""
+
 import hashlib
 import secrets
 import os

@@ -416,3 +416,7 @@ The application uses a hybrid storage approach:
   - Filename format: `{cm_uid}.png`
 
 All storage directories are created automatically if they don't exist.
+
+## Acknowledgments
+
+[NLnet foundation](https://nlnet.nl) has supported the PyCM API for version **0.1** through the [NGI0 Commons](https://nlnet.nl/commonsfund/) Fund. This fund is set up by [NLnet foundation](https://nlnet.nl) with funding from the European Commission's [Next Generation Internet program](https://ngi.eu), administered by DG Communications Networks, Content, and Technology under grant agreement [**No 101135429**](https://nlnet.nl/project/PyCM-API/).
